@@ -1,0 +1,56 @@
+.seo-block {
+    background-color: $main-grafite;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    .container {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+        cursor: default;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        &-wrap {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40px;
+        }
+
+        font-size: 18px;
+        text-align: left;
+
+        li {
+            margin-top: 10px;
+        }
+
+        &--bulleted {
+            padding-left: 20px;
+            position: relative;
+            @include bulleted-list();
+        }
+    }
+
+    @media (max-width: 992px) {
+        .container {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 567px) {
+        h2 {
+            font-size: 24px;
+        }
+    }
+}
