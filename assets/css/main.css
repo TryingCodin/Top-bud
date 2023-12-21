@@ -2,7 +2,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-ExtraLight.ttf") format("truetype"), url("../font/FiraSans-ExtraLight.woff") format("woff"), url("../font/FiraSans-ExtraLight.woff2") format("woff2");
+  src: url("../font/FiraSans-ExtraLight.ttf") format("truetype"),
+    url("../font/FiraSans-ExtraLight.woff") format("woff"),
+    url("../font/FiraSans-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -10,7 +12,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-Light.ttf") format("truetype"), url("../font/FiraSans-Light.woff") format("woff"), url("../font/FiraSans-Light.woff2") format("woff2");
+  src: url("../font/FiraSans-Light.ttf") format("truetype"),
+    url("../font/FiraSans-Light.woff") format("woff"),
+    url("../font/FiraSans-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -18,7 +22,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-Regular.ttf") format("truetype"), url("../font/FiraSans-Regular.woff") format("woff"), url("../font/FiraSans-Regular.woff2") format("woff2");
+  src: url("../font/FiraSans-Regular.ttf") format("truetype"),
+    url("../font/FiraSans-Regular.woff") format("woff"),
+    url("../font/FiraSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -26,7 +32,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-Medium.ttf") format("truetype"), url("../font/FiraSans-Medium.woff") format("woff"), url("../font/FiraSans-Medium.woff2") format("woff2");
+  src: url("../font/FiraSans-Medium.ttf") format("truetype"),
+    url("../font/FiraSans-Medium.woff") format("woff"),
+    url("../font/FiraSans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -34,7 +42,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-ExtraBold.ttf") format("truetype"), url("../font/FiraSans-ExtraBold.woff") format("woff"), url("../font/FiraSans-ExtraBold.woff2") format("woff2");
+  src: url("../font/FiraSans-ExtraBold.ttf") format("truetype"),
+    url("../font/FiraSans-ExtraBold.woff") format("woff"),
+    url("../font/FiraSans-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -1009,7 +1019,8 @@ h4 {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #464952;
-  -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.5);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
   position: relative;
   padding-left: 10px;
@@ -1385,7 +1396,8 @@ h4 {
 
 .seo-block {
   background-color: #464952;
-  -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.5);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
   position: relative;
 }
@@ -1559,7 +1571,8 @@ h4 {
   padding-top: 30px;
   padding-bottom: 5px;
   background-color: #464952;
-  -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.5);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
@@ -2093,5 +2106,42 @@ h4 {
   100% {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+  }
+}
+
+.assortment__grid {
+  gap: 16px;
+  display: flex;
+  padding: 0 8px;
+}
+
+@media screen and (min-width: 641px) {
+  .assortment__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .assortment__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "a b c"
+      "a b e";
+  }
+  .item1 {
+    grid-area: a;
+  }
+
+  .item2 {
+    grid-area: b;
+  }
+
+  .item3 {
+    grid-area: c;
+  }
+
+  .item4 {
+    grid-area: e;
   }
 }
