@@ -2128,8 +2128,8 @@ h4 {
   .assortment__grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "a b c"
-      "a b e";
+      "c b a"
+      "c b e";
   }
   .item1 {
     grid-area: a;

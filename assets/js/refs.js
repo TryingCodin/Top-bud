@@ -10,3 +10,5 @@ export const catalogSidebarEl = document.querySelector(
 export const sidebarFilterEl = document.querySelector(
   ".catalog__sidebar--filter"
 );
+
+export const enscartEl = document.querySelector("#enscart_wrapper");

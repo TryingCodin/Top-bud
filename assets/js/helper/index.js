@@ -1,4 +1,7 @@
 import { getDataFromStorage } from "../api/sectionstore.js";
+import { getFromLocalStorage } from "../api/localstorage.js";
+import { BTN_TEXT_ADD_PRODUCT, BTN_TEXT_DELETE_PRODUCT } from "../var.js";
+
 const FILTER_KEY = "filtering-options";
 
 export function getMenuStructure(data) {
@@ -107,4 +110,11 @@ export function filteringOptions() {
   const names = data.map(({ name }) => name?.toUpperCase());
   const values = data.map(({ value }) => value?.toString());
   return [names, values];
+}
+
+export function getButtonText(id) {
+  const items = getFromLocalStorage().map(({ nomer }) => nomer.toString());
+  return items.includes(id.toString())
+    ? BTN_TEXT_DELETE_PRODUCT
+    : BTN_TEXT_ADD_PRODUCT;
 }

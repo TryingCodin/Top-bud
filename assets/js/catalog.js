@@ -3,6 +3,7 @@ import { createCard } from "./markup/card.js";
 import { createSidebarMenu } from "./markup/sidebar-menu.js";
 import { createListCharacteristics } from "./markup/list-characteristics.js";
 import {
+  enscartEl,
   catalogGridEl,
   sortSelectEl,
   catalogSidebarEl,
@@ -21,6 +22,15 @@ import {
   saveDataToSectionStore,
   getDataFromSectionStore,
 } from "./api/sectionstore.js";
+
+import {
+  setToLocalStorage,
+  getFromLocalStorage,
+  addToLocalStorage,
+} from "./api/localstorage.js";
+import { BTN_TEXT_ADD_PRODUCT, BTN_TEXT_DELETE_PRODUCT } from "./var.js";
+
+import { sortProducts } from "./helper/sort.js";
 
 const FILTER_KEY = "filtering-options";
 let response = "";
@@ -104,29 +114,33 @@ sidebarFilterEl.addEventListener("click", function (event) {
   button.classList.toggle("expanded");
 });
 
-function sortProducts(products, sortType) {
-  const sortedProducts = [...products];
+catalogGridEl.addEventListener("click", updateYourCart);
 
-  switch (sortType) {
-    case "name-asc":
-      return sortedProducts.sort((a, b) =>
-        a["nazva"].localeCompare(b["nazva"])
-      );
-    case "name-desc":
-      return sortedProducts.sort((a, b) =>
-        b["nazva"].localeCompare(a["nazva"])
-      );
-    case "price-asc":
-      return sortedProducts.sort(
-        (a, b) => parseFloat(a["cina"]) - parseFloat(b["cina"])
-      );
-    case "price-desc":
-      return sortedProducts.sort(
-        (a, b) => parseFloat(b["cina"]) - parseFloat(a["cina"])
-      );
-    default:
-      return sortedProducts.sort(
-        (a, b) => parseFloat(a["nomer"]) - parseFloat(b["nomer"])
-      );
+function updateYourCart(e) {
+  if (!e.target.classList.contains("btn")) return;
+  const id = e.target.dataset.id;
+  let products = getFromLocalStorage();
+  const product = products.find((item) => item.nomer.toString() === id);
+  let text = BTN_TEXT_ADD_PRODUCT;
+  if (product) {
+    products = products.filter((item) => item.nomer.toString() !== id);
+  } else {
+    const product = response.find((item) => item.nomer.toString() === id);
+    products.push({ ...product, count: 1 });
+    text = BTN_TEXT_DELETE_PRODUCT;
   }
+  e.target.textContent = text;
+  addToLocalStorage(products);
+  toggleEnscart();
 }
+
+function toggleEnscart() {
+  let products = getFromLocalStorage();
+  const method = products.length ? "remove" : "add";
+  enscartEl.classList[method]("is-hidden");
+  const total = products.reduce((acc, item) => {
+    return acc + Number(item.count);
+  }, 0);
+  enscartEl.children[0].setAttribute("data-count", products.length);
+}
+toggleEnscart();

@@ -2,7 +2,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-ExtraLight.ttf") format("truetype"), url("../font/FiraSans-ExtraLight.woff") format("woff"), url("../font/FiraSans-ExtraLight.woff2") format("woff2");
+  src: url("../font/FiraSans-ExtraLight.ttf") format("truetype"),
+    url("../font/FiraSans-ExtraLight.woff") format("woff"),
+    url("../font/FiraSans-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -10,7 +12,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-Light.ttf") format("truetype"), url("../font/FiraSans-Light.woff") format("woff"), url("../font/FiraSans-Light.woff2") format("woff2");
+  src: url("../font/FiraSans-Light.ttf") format("truetype"),
+    url("../font/FiraSans-Light.woff") format("woff"),
+    url("../font/FiraSans-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -18,7 +22,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-Regular.ttf") format("truetype"), url("../font/FiraSans-Regular.woff") format("woff"), url("../font/FiraSans-Regular.woff2") format("woff2");
+  src: url("../font/FiraSans-Regular.ttf") format("truetype"),
+    url("../font/FiraSans-Regular.woff") format("woff"),
+    url("../font/FiraSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -26,7 +32,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-Medium.ttf") format("truetype"), url("../font/FiraSans-Medium.woff") format("woff"), url("../font/FiraSans-Medium.woff2") format("woff2");
+  src: url("../font/FiraSans-Medium.ttf") format("truetype"),
+    url("../font/FiraSans-Medium.woff") format("woff"),
+    url("../font/FiraSans-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -34,7 +42,9 @@
 
 @font-face {
   font-family: "FiraSans";
-  src: url("../font/FiraSans-ExtraBold.ttf") format("truetype"), url("../font/FiraSans-ExtraBold.woff") format("woff"), url("../font/FiraSans-ExtraBold.woff2") format("woff2");
+  src: url("../font/FiraSans-ExtraBold.ttf") format("truetype"),
+    url("../font/FiraSans-ExtraBold.woff") format("woff"),
+    url("../font/FiraSans-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -1191,7 +1201,8 @@ h4 {
   padding-top: 30px;
   padding-bottom: 5px;
   background-color: #464952;
-  -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.5);
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 1;
@@ -1726,4 +1737,84 @@ h4 {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+/*----------------------*/
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  border-radius: 2px;
+  padding: 5px 15px;
+  background-color: #73879e;
+  color: white !important;
+}
+
+#enscart_wrapper {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1140;
+}
+
+#enscart_image_wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+  will-change: transform;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#enscart_image {
+  margin: 10px;
+}
+
+#enscart_counter {
+  display: none;
+  cursor: pointer;
+  min-width: 30px;
+  height: 30px;
+  background-color: #d62240;
+  color: #fff;
+  border-radius: 30px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0px 3px;
+  z-index: 1150;
+}
+
+#enscart_image_wrapper:after {
+  content: attr(data-count);
+  top: 0;
+  right: -5px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  background: red;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.is-hidden {
+  display: none;
 }
