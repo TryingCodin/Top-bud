@@ -1,15 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- Meta tags for SEO -->
+    <meta name="description"
+        content="Замовити металопрокат оптом і в роздріб в Україні. ТОП БУД ТРЕЙД надає: ✅ Широкий вибір прокату ✅ Захист від браку ✅ Гарантію на продукцію">
+
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png">
+
+    <title>Металопрокат купити в Україні: ціна</title>
+
+    <!-- Vendor -->
+    <link rel="stylesheet" href="./assets/css/normalize.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/basket.css">
 </head>
 
 <body>
+    <header>
+        <div class="header__content--top">
+            <div class="container">
+                <div class="schedule-content">
+                    <img src="./assets/images/icons/icon__clock.svg" alt="Графік роботи" title="Графік роботи">
+                    <span>Графік роботи офісу: ПН-ПТ - 8:00-18:00</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="header__content">
+            <div class="container">
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="./assets/images/main-logo--black.png" alt="Логотип" title="Логотип">
+                    </a>
+                    <h2>
+                        «ТОП БУД ТРЕЙД»
+                        <span>постачальник металопрокату та</span>
+                        <span>деревно-плитних матеріалів</span>
+                    </h2>
+                </div>
+
+                <div class="contacts-links">
+                    <a href="tel:+380680707737" class="contacts-links--phone">
+                        <img src="./assets/images/icons/icon__phone--gray.svg" alt="Телефон" title="Телефон">
+                        <img src="./assets/images/icons/icon__telegram--gray.svg" style="width: 16px; height: 16px"
+                            alt="Телеграм" title="Телеграм">
+                        <img src="./assets/images/icons/icon__viber--gray.svg" style="width: 16px; height: 16px"
+                            alt="Вайбер" title="Вайбер">
+                        +38 068 070 77 37
+                    </a>
+
+                    <a href="mailto:topbudtrade1@gmail.com" class="contacts-links--mail">
+                        <img src="./assets/images/icons/icon__mail--gray.svg" alt="Пошта" title="Пошта">
+                        topbudtrade1@gmail.com
+                    </a>
+
+                    <div class="contacts-links--recall">
+                        <img src="./assets/images/icons/icon__recall.svg" alt="Зворотній зв'язок"
+                            title="Зворотній зв'язок">
+                        <span>Передзвонити вам?</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__menu">
+            <div class="container">
+                <nav class="header__menu--nav">
+                    <ul class="header__menu--list">
+                        <li class="header__menu--list-dropdown-item active-category">
+                            <a href="javascript:void(0);" data-category="Каталог" class="header__menu--catalog">
+                                <span>Каталог</span>
+                            </a>
+                        </li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="delivery.html">Доставка і оплата</a></li>
+                        <li><a href="returns.html">Повернення та обмін</a></li>
+                        <li><a href="contacts.html">Контакти</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="basket">
+        <div class="container">
+            <h1 class="basket__title">Оформлення замовлення</h1>
+
+            <div class="simplecheckout-block" id="simplecheckout_cart">
+                <div class="table-responsive">
+                    <table class="simplecheckout-cart">
+                        <colgroup>
+                            <col class="image">
+                            <col class="name">
+                            <col class="quantity">
+                            <col class="price">
+                            <col class="total">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="image">Фото</th>
+                                <th class="name">Найменування товару</th>
+                                <th class="quantity"><span title="Кількість">Кількість</span></th>
+                                <th class="price">Ціна</th>
+                                <th class="total">Разом</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="simplecheckout-cart-total" id="total_sub_total">
+                    <span><b>Сума:</b></span>
+                    <span class="simplecheckout-cart-total-value">0 грн</span>
+                    <span class="simplecheckout-cart-total-remove">
+                    </span>
+                </div>
+                <div class="simplecheckout-cart-total" id="total_total">
+                    <span><b>Разом:</b></span>
+                    <span class="simplecheckout-cart-total-value">0 грн</span>
+                </div>
+            </div>
+            <div class="form-block">
+                <form class="order-form">
+                    <div>
+                        <div class="form-header">
+                            Покупець
+                        </div>
+                        <div class="form-group my-required">
+                            <label for="name" class="label">ПІБ</label>
+                            <input type="text" class="form-control" name="name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email">
+                        </div>
+                        <div class="form-group my-required">
+                            <label for="tel" class="label">Телефон</label>
+                            <input type="tel" class="form-control" name="tel" id="tel"
+                                placeholder="+38 (___) ___-__-__">
+                        </div>
+                        <div class="form-header">
+                            Адреса доставки
+                        </div>
+                        <div class="form-group my-required">
+                            <label for="region" class="label">Регіон</label>
+                            <select class="form-control" name="region" id="region">
+                                <option value="" selected="selected"> --- Виберіть --- </option>
+                                <option value="Івано-Франківська обл.">Івано-Франківська область</option>
+                                <option value="Вінницька обл.">Вінницька область</option>
+                                <option value="Волинська обл.">Волинська область</option>
+                                <option value="Дніпропетровська обл.">Дніпропетровська область</option>
+                                <option value="Донецька обл.">Донецька область</option>
+                                <option value="Житомирська обл.">Житомирська область</option>
+                                <option value="Закарпатська обл.">Закарпатська область</option>
+                                <option value="Запорізька обл.">Запорізька область</option>
+                                <option value="Кіровоградська обл.">Кіровоградська область</option>
+                                <option value="м. Київ">Київ</option>
+                                <option value="Київська обл.">Київська область</option>
+                                <option value="Крим">Крим</option>
+                                <option value="Луганська обл.">Луганська область</option>
+                                <option value="Львівська обл.">Львівська область</option>
+                                <option value="Миколаївська обл.">Миколаївська область</option>
+                                <option value="Одеська обл.">Одеська область</option>
+                                <option value="Полтавська обл.">Полтавська область</option>
+                                <option value="Рівненська обл.">Рівненська область</option>
+                                <option value="м. Севастополь">Севастополь</option>
+                                <option value="Сумська обл.">Сумська область</option>
+                                <option value="Тернопільська обл.">Тернопільська область</option>
+                                <option value="Харківська обл.">Харківська область</option>
+                                <option value="Херсонська обл.">Херсонська область</option>
+                                <option value="Хмельницька обл.">Хмельницька область</option>
+                                <option value="Черкаська обл.">Черкаська область</option>
+                                <option value="Чернівецька обл.">Чернівецька область</option>
+                                <option value="Чернігівська обл.">Чернігівська область</option>
+                            </select>
+                        </div>
+                        <div class="form-group my-required">
+                            <label for="city" class="label">Місто</label>
+                            <input type="text" class="form-control" name="city" id="city">
+                        </div>
+                        <div class="form-group my-required">
+                            <label for="addresses" class="label">Адреса</label>
+                            <input type="text" class="form-control" name="addresses" id="addresses">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-header">
+                            Спосіб доставки
+                        </div>
+                        <div class="form-group">
+                            <div class="text">Нова Пошта</div>
+                            <label for="novaposhta.warehouse" class="field">
+                                <input type="radio" name="shipping_method" value="novaposhta.warehouse"
+                                    id="novaposhta.warehouse">
+                                Доставка у відділення Нової Пошти
+                            </label>
+                            <label for="novaposhta.doors" class="field">
+                                <input type="radio" name="shipping_method" value="novaposhta.doors"
+                                    id="novaposhta.doors">
+                                Доставка кур`єром Нової Пошти на адресу
+                            </label>
+                            <div class="text">SAT</div>
+                            <label for="sat" class="field">
+                                <input type="radio" name="shipping_method" value="sat" id="sat">
+                                Доставка SAT
+                            </label>
+                            <div class="text">Delivery</div>
+                            <label for="delivery" class="field">
+                                <input type="radio" name="shipping_method" value="delivery" id="delivery"
+                                    checked="checked">
+                                Доставка Delivery
+                            </label>
+                        </div>
+                        <div class="form-header">
+                            Спосіб оплати
+                        </div>
+                        <div class="form-group">
+                            <label for="bank_transfer">
+                                <input type="radio" name="payment_method" value="bank_transfer" id="bank_transfer"
+                                    checked="checked">
+                                Оплата на розрахунковий рахунок ТОВ
+                            </label>
+                        </div>
+                        <div class="form-header">
+                            Коментар
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="comment" id="comment"
+                                placeholder="Коментар"></textarea>
+                        </div>
+                    </div>
+                    <span></span>
+                    <button type="submit" class="btn-send">Оформити замовлення</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <a href="index.html">
+                        <img src="./assets/images/main-logo--white.png" alt="Логотип" title="Логотип">
+                    </a>
+
+                    <h4>Постачальник металопрокату та деревно-плитних матеріалів</h4>
+                </div>
+
+                <ul class="footer__pages">
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="delivery.html">Доставка і оплата</a></li>
+                    <li><a href="returns.html">Повернення та обмін</a></li>
+                </ul>
+
+                <div class="contacts-links">
+                    <a href="tel:+380680707737" class="contacts-links--phone">
+                        <img src="./assets/images/icons/icon__phone--white.svg" alt="Телефон" title="Телефон">
+                        <img src="./assets/images/icons/icon__telegram--white.svg" style="width: 16px; height: 16px"
+                            alt="Телеграм" title="Телеграм">
+                        <img src="./assets/images/icons/icon__viber--white.svg" style="width: 16px; height: 16px"
+                            alt="Вайбер" title="Вайбер">
+                        +38 068 070 77 37
+                    </a>
+
+                    <a href="mailto:topbudtrade1@gmail.com" class="contacts-links--mail">
+                        <img src="./assets/images/icons/icon__mail--white.svg" alt="Пошта" title="Пошта">
+                        topbudtrade1@gmail.com
+                    </a>
+
+                    <a href="https://maps.app.goo.gl/8S6NyVXjsWStKakV6" class="contacts-links--location">
+                        <img src="./assets/images/icons/icon__location.svg" style="width: 24px; height: 24px"
+                            alt="Адреса" title="Адреса">
+                        <div class="contacts-links--location-text">
+                            <span>Україна, Київ,</span>
+                            <span>вул. Саксаганського, 41</span>
+                        </div>
+                    </a>
+
+                    <div class="schedule-content">
+                        <img src="./assets/images/icons/icon__clock.svg" alt="Графік роботи" title="Графік роботи">
+                        <div class="schedule-content-text">
+                            <span>Графік роботи офісу:</span>
+                            <span>ПН-ПТ - 8:00-18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        © 2022-2023. «ТОП БУД ТРЕЙД». Всі права захищені.
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"
+        integrity="sha512-efAcjYoYT0sXxQRtxGY37CKYmqsFVOIwMApaEbrxJr4RwqVVGw8o+Lfh/+59TU07+suZn1BWq4fDl5fdgyCNkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/top-menu.js" type="module"></script>
+    <script src="./assets/js/basket.js" type="module"></script>
+    <script src="./assets/js/submit-handler.js"></script>
 </body>
 
 </html>

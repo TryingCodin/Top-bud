@@ -12,3 +12,8 @@ export const sidebarFilterEl = document.querySelector(
 );
 
 export const enscartEl = document.querySelector("#enscart_wrapper");
+export const orderFormEl = document.querySelector(".order-form");
+export const tbodyEl = document.querySelector(".tbody");
+export const cartTotalEl = document.querySelectorAll(
+  ".simplecheckout-cart-total-value"
+);
