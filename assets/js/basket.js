@@ -1,5 +1,5 @@
 import { createBasket } from "./markup/basket.js";
-import { tbodyEl, cartTotalEl, orderFormEl } from "./refs.js";
+import { tbodyEl, cartTotalEl } from "./refs.js";
 import { getFromLocalStorage, addToLocalStorage } from "./api/localstorage.js";
 import { updateMarkup } from "./helper/index.js";
 
@@ -96,10 +96,3 @@ window.addEventListener("beforeunload", function (e) {
   const items = getFromLocalStorage().filter(({ count }) => count > 0);
   addToLocalStorage(items);
 });
-
-orderFormEl.addEventListener("submit", onSubmit);
-
-function onSubmit(e) {
-  e.preventDefault();
-  // const data = Object.fromEntries(new FormData(e.target));
-}

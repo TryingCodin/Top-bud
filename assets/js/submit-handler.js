@@ -1,6 +1,9 @@
 const STORAGE_KEY = "products-list";
 
 $(document).ready(function () {
+  const tbodyEl = $(".tbody");
+  const totalValueEl = $(".simplecheckout-cart-total-value");
+
   $(".order-form").validate({
     rules: {
       name: {
@@ -48,7 +51,10 @@ $(document).ready(function () {
       data.products = products;
       sendData(data)
         .then((r) => {
-          console.log(r);
+          localStorage.removeItem(STORAGE_KEY);
+          tbodyEl.html("");
+          $(totalValueEl[0]).text("0 грн.");
+          $(totalValueEl[1]).text("0 грн.");
         })
         .catch(console.log)
         .finally(() => {
